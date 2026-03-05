@@ -196,11 +196,15 @@ h3 {
   right: 0;
   background: var(--white);
   z-index: 1000;
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .site-header.scrolled {
   box-shadow: var(--shadow);
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
 }
 
 .header-container {
@@ -797,6 +801,81 @@ h3 {
 }
 
 /* ========================================
+   Skip to Content (Accessibility)
+   ======================================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 2000;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 16px;
+  color: var(--white);
+}
+
+/* ========================================
+   External Platform Links
+   ======================================== */
+.platform-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.platform-link-quenza {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.platform-link-quenza:hover {
+  background: #c8e6c9;
+  color: #1b5e20;
+}
+
+.platform-link-novopsych {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.platform-link-novopsych:hover {
+  background: #bbdefb;
+  color: #0d47a1;
+}
+
+.platform-link-whatsapp {
+  background: #e8f5e9;
+  color: #25d366;
+}
+
+.platform-link-whatsapp:hover {
+  background: #c8e6c9;
+  color: #128c7e;
+}
+
+.platform-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* ========================================
    Animations
    ======================================== */
 .fade-in {
@@ -808,6 +887,54 @@ h3 {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .site-header {
+    transition: box-shadow 0.3s ease;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ========================================
+   Lazy Loading & Image Optimization
+   ======================================== */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+img[loading="lazy"].loaded,
+img[loading="lazy"][complete] {
+  opacity: 1;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+/* WebP support with fallback via picture element */
+picture {
+  display: block;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ========================================
