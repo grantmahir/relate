@@ -30,35 +30,54 @@
   <div class="page-header">
     <div class="container">
       <h1>Contact</h1>
-      <p>Get in touch to book a session or ask a question.</p>
+      <p>Get in touch to book a session, ask a question, or start your journey.</p>
     </div>
   </div>
 
-  <!-- Contact Section — placeholder content for PRD2 -->
+  <!-- Contact Section -->
   <section>
     <div class="container">
       <div class="form-grid">
         <div class="fade-in">
           <h2>Let's start a conversation</h2>
-          <p>Ready to take the first step? Reach out via any of the methods below, or fill in the contact form.</p>
+          <p>Ready to take the first step? Reach out via any of the methods below, or fill in the contact form and we'll get back to you within 24 hours.</p>
 
-          <div style="margin-top: 32px;">
-            <div style="margin-bottom: 20px;">
-              <strong style="display: block; margin-bottom: 4px;">WhatsApp</strong>
-              <span style="color: var(--gray-500);">Book via WhatsApp — link to be added</span>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon">&#128172;</div>
+              <div>
+                <strong>WhatsApp</strong>
+                <p>The quickest way to book a session or ask a question. Tap below to start a WhatsApp conversation.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 8px;">Chat on WhatsApp</a>
+              </div>
             </div>
-            <div style="margin-bottom: 20px;">
-              <strong style="display: block; margin-bottom: 4px;">Email</strong>
-              <span style="color: var(--gray-500);">hello@relatewellness.com</span>
+            <div class="contact-method">
+              <div class="contact-method-icon">&#9993;</div>
+              <div>
+                <strong>Email</strong>
+                <p>For detailed enquiries or if you prefer email.</p>
+                <a href="mailto:hello@relatewellness.com" style="color: var(--primary); font-weight: 500;">hello@relatewellness.com</a>
+              </div>
             </div>
-            <div style="margin-bottom: 20px;">
-              <strong style="display: block; margin-bottom: 4px;">Professional Registration</strong>
-              <span style="color: var(--gray-500);">Registration details to be added</span>
+            <div class="contact-method">
+              <div class="contact-method-icon">&#9989;</div>
+              <div>
+                <strong>Professional Registration</strong>
+                <p>Grant is a registered psychologist. Registration number and board details available on request for verification purposes.</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">&#128337;</div>
+              <div>
+                <strong>Session Hours</strong>
+                <p>Monday – Friday: 8:00 AM – 6:00 PM<br>Saturday: By arrangement<br>Sunday: Closed</p>
+              </div>
             </div>
           </div>
         </div>
 
         <form class="fade-in" id="contactForm">
+          <h3 style="margin-bottom: 20px;">Send a message</h3>
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" required>
@@ -66,6 +85,10 @@
           <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone">
           </div>
           <div class="form-group">
             <label for="service">Service Interest</label>
@@ -76,24 +99,50 @@
               <option value="executive">Executive Coaching</option>
               <option value="corporate">Corporate Services</option>
               <option value="programs">Digital Programs</option>
-              <option value="other">Other</option>
+              <option value="other">Other / Not Sure</option>
             </select>
           </div>
           <div class="form-group">
             <label for="message">Your Message</label>
-            <textarea id="message" rows="5" required></textarea>
+            <textarea id="message" rows="5" placeholder="Tell us a bit about what you're looking for..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
+          <p style="margin-top: 12px; font-size: 0.8rem; color: var(--gray-500);">Your information is kept strictly confidential and will only be used to respond to your enquiry.</p>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="bg-cream">
+    <div class="container">
+      <div class="section-title">
+        <h2>Before you reach out</h2>
+        <p>Answers to common questions about getting started.</p>
+      </div>
+      <div class="container-narrow">
+        <div class="card fade-in" style="margin-bottom: 16px;">
+          <h3>Is the initial consultation free?</h3>
+          <p>The initial consultation is a brief conversation to understand your needs and determine fit. Contact us to discuss details and any associated costs.</p>
+        </div>
+        <div class="card fade-in" style="margin-bottom: 16px;">
+          <h3>Do you offer online sessions?</h3>
+          <p>Yes. All services — individual therapy, couples therapy, executive coaching, and corporate programs — are available via secure video conferencing.</p>
+        </div>
+        <div class="card fade-in" style="margin-bottom: 16px;">
+          <h3>How quickly can I get an appointment?</h3>
+          <p>We aim to schedule initial consultations within one week of contact. Session availability varies, but we'll do our best to accommodate your schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <div id="site-footer">
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
-          <div class="footer-brand"><h3>Relate Wellness</h3><p>A calm digital gateway to psychological care.</p></div>
+          <div class="footer-brand"><h3>Relate Wellness</h3><p>A calm digital gateway to psychological care. Connecting therapy services, digital programs, educational insights, and mental health tools.</p></div>
           <div class="footer-col"><h4>Services</h4><ul><li><a href="therapy-services.html">Therapy Services</a></li><li><a href="corporate-services.html">Corporate Services</a></li><li><a href="programs.html">Digital Programs</a></li><li><a href="tools.html">Mental Health Tools</a></li></ul></div>
           <div class="footer-col"><h4>About</h4><ul><li><a href="work-with-grant.html">Work With Grant</a></li><li><a href="insights.html">Insights</a></li><li><a href="start-here.html">Start Here</a></li></ul></div>
           <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Book a Session</a></li></ul></div>
