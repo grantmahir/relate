@@ -53,7 +53,7 @@
     </div>
   </section>
 
-  <!-- Placeholder: ToolEmbedFrame — To be replaced in PRD4 -->
+  <!-- Self-Assessment Tools -->
   <section class="bg-cream">
     <div class="container">
       <div class="section-title">
@@ -62,34 +62,64 @@
       </div>
       <div class="card-grid card-grid-3">
 
-        <!-- Placeholder: ToolEmbedFrame To be replaced in PRD4 -->
-        <div class="tool-placeholder card fade-in" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 20px;">&#128293;</div>
-          <h3>Burnout Screening</h3>
+        <!-- ToolEmbedFrame: Burnout Screening -->
+        <div class="tool-card card fade-in">
+          <div class="tool-card-header">
+            <div class="card-icon tool-card-icon tool-icon-burnout">&#128293;</div>
+            <h3>Burnout Screening</h3>
+          </div>
           <p>A brief assessment to help you identify signs of burnout and understand your current stress levels.</p>
-          <div style="margin-top: 20px; padding: 40px 20px; background: var(--gray-100); border-radius: var(--radius); color: var(--gray-500); font-size: 0.9rem;">
-            Tool will load from external provider
+          <div class="tool-embed-frame" id="tool-burnout">
+            <div class="tool-embed-intro">
+              <span class="tool-badge">10 questions</span>
+              <span class="tool-badge">~3 minutes</span>
+            </div>
+            <button class="btn btn-primary tool-launch-btn" data-tool="burnout" onclick="launchTool('burnout')">Start Screening</button>
+            <div class="tool-embed-container" data-tool="burnout" style="display: none;">
+              <div class="tool-loading">Loading tool...</div>
+            </div>
           </div>
+          <p class="tool-disclaimer">This is a screening tool, not a clinical diagnosis. For professional assessment, please book a session.</p>
         </div>
 
-        <!-- Placeholder: ToolEmbedFrame To be replaced in PRD4 -->
-        <div class="tool-placeholder card fade-in" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 20px;">&#128578;</div>
-          <h3>Mood Check-in</h3>
+        <!-- ToolEmbedFrame: Mood Check-in -->
+        <div class="tool-card card fade-in">
+          <div class="tool-card-header">
+            <div class="card-icon tool-card-icon tool-icon-mood">&#128578;</div>
+            <h3>Mood Check-in</h3>
+          </div>
           <p>A simple, reflective tool to track how you're feeling and identify patterns in your emotional state.</p>
-          <div style="margin-top: 20px; padding: 40px 20px; background: var(--gray-100); border-radius: var(--radius); color: var(--gray-500); font-size: 0.9rem;">
-            Tool will load from external provider
+          <div class="tool-embed-frame" id="tool-mood">
+            <div class="tool-embed-intro">
+              <span class="tool-badge">5 questions</span>
+              <span class="tool-badge">~2 minutes</span>
+            </div>
+            <button class="btn btn-primary tool-launch-btn" data-tool="mood" onclick="launchTool('mood')">Start Check-in</button>
+            <div class="tool-embed-container" data-tool="mood" style="display: none;">
+              <div class="tool-loading">Loading tool...</div>
+            </div>
           </div>
+          <p class="tool-disclaimer">Your responses are anonymous and are not stored.</p>
         </div>
 
-        <!-- Placeholder: ToolEmbedFrame To be replaced in PRD4 -->
-        <div class="tool-placeholder card fade-in" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 20px;">&#128161;</div>
-          <h3>Schema Insight Quiz</h3>
-          <p>Explore your core emotional patterns and understand how early experiences shape your current behaviour.</p>
-          <div style="margin-top: 20px; padding: 40px 20px; background: var(--gray-100); border-radius: var(--radius); color: var(--gray-500); font-size: 0.9rem;">
-            Tool will load from external provider
+        <!-- ToolEmbedFrame: Schema Insight Quiz -->
+        <div class="tool-card card fade-in">
+          <div class="tool-card-header">
+            <div class="card-icon tool-card-icon tool-icon-schema">&#128161;</div>
+            <h3>Schema Insight Quiz</h3>
           </div>
+          <p>Explore your core emotional patterns and understand how early experiences shape your current behaviour.</p>
+          <div class="tool-embed-frame" id="tool-schema">
+            <div class="tool-embed-intro">
+              <span class="tool-badge">15 questions</span>
+              <span class="tool-badge">~5 minutes</span>
+            </div>
+            <button class="btn btn-primary tool-launch-btn" data-tool="schema" onclick="launchTool('schema')">Start Quiz</button>
+            <div class="tool-embed-container" data-tool="schema" style="display: none;">
+              <div class="tool-loading">Loading tool...</div>
+            </div>
+          </div>
+          <p class="tool-disclaimer">Based on schema therapy principles. For deeper exploration, consider individual therapy.</p>
         </div>
 
       </div>

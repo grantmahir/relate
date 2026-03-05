@@ -293,6 +293,26 @@ function trackEvent(name, props) {
 }
 
 /* ----------------------------------------
+   Tool Launch (ToolEmbedFrame)
+   Handles launching embedded tools on tools.html
+   ---------------------------------------- */
+function launchTool(toolName) {
+  var btn = document.querySelector('.tool-launch-btn[data-tool="' + toolName + '"]');
+  var container = document.querySelector('.tool-embed-container[data-tool="' + toolName + '"]');
+
+  if (!btn || !container) return;
+
+  trackEvent('tool_launch', { tool: toolName });
+
+  btn.style.display = 'none';
+  container.style.display = 'flex';
+
+  // In production, replace with actual external embed URL
+  // e.g. container.innerHTML = '<iframe src="https://quenza.com/tool/..." ...></iframe>';
+  container.innerHTML = '<div class="tool-loading">Tool loading — external provider integration pending.<br><br><a href="contact.html" style="color: var(--primary); font-weight: 500;">Book a session for a full assessment</a></div>';
+}
+
+/* ----------------------------------------
    Lazy Loading Images
    Adds loaded class when images finish loading
    ---------------------------------------- */

@@ -801,6 +801,251 @@ h3 {
 }
 
 /* ========================================
+   ProgramCard
+   ======================================== */
+.program-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.program-card-header h3 {
+  margin-bottom: 4px;
+}
+
+.program-card-icon {
+  flex-shrink: 0;
+}
+
+.program-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.program-tag-burnout {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.program-tag-awareness {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.program-tag-identity {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.program-tag-compassion {
+  background: #fce4ec;
+  color: #c62828;
+}
+
+.program-modules {
+  list-style: none;
+  margin: 16px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.program-modules li {
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.program-modules li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.program-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.program-detail {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  background: var(--gray-100);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.program-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ========================================
+   ToolEmbedFrame / ToolCard
+   ======================================== */
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tool-card-header {
+  margin-bottom: 12px;
+}
+
+.tool-card-icon {
+  margin: 0 auto 12px;
+}
+
+.tool-icon-burnout {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.tool-icon-mood {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.tool-icon-schema {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.tool-embed-frame {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.tool-embed-intro {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tool-badge {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  background: var(--gray-100);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.tool-launch-btn {
+  width: 100%;
+}
+
+.tool-embed-container {
+  margin-top: 16px;
+  min-height: 200px;
+  border-radius: var(--radius);
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-loading {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.tool-disclaimer {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: var(--gray-300);
+  font-style: italic;
+}
+
+/* ========================================
+   ArticleCard
+   ======================================== */
+.article-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card-image {
+  height: 180px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px;
+  position: relative;
+}
+
+.article-category {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.article-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.article-card-body h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.article-card-body p {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.article-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: var(--gray-300);
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.article-read-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.article-read-more:hover {
+  color: var(--primary-dark);
+}
+
+/* ========================================
    Skip to Content (Accessibility)
    ======================================== */
 .skip-link {
