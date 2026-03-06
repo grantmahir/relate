@@ -259,10 +259,9 @@ function initAnalytics() {
   });
 
   // Track tool launch clicks
-  document.querySelectorAll('.tool-placeholder .btn, .tool-placeholder a').forEach(link => {
-    link.addEventListener('click', function () {
-      const toolCard = this.closest('.tool-placeholder');
-      const toolName = toolCard ? toolCard.querySelector('h3')?.textContent : 'unknown';
+  document.querySelectorAll('.tool-card .tool-launch-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const toolName = this.getAttribute('data-tool') || 'unknown';
       trackEvent('tool_launch', { tool: toolName });
     });
   });

@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects
+# Redirect www to non-www (handled by Cloudflare DNS typically, but included as fallback)
+# /index  /  301
